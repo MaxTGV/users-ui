@@ -5,6 +5,7 @@ import { Form } from "./shared/components/Form";
 import { Input } from "./shared/components/Input";
 
 const UserFormComponent = styled.div`
+  width: 100%;
   margin: 10px auto;
   flex-direction: column;
   justify-content: center;
@@ -52,10 +53,10 @@ export const NewUserForm = ({ onClicked }) => {
     <UserFormComponent>
       <h1>New user</h1>
       <UserForm onSubmit={onSubmit}>
-        <InputID {...register("id")} name="id" id="id" />
-        <Input {...register("name")} name="name" id="name" />
-        <Input {...register("phone")} name="phone" id="phone" />
-        <Input {...register("email")} name="email" id="email" />
+        <InputID {...register("id")} name="id" id="id" placeholder="ID"/>
+        <Input {...register("name")} name="name" id="name" placeholder="Username"/>
+        <Input {...register("phone")} name="phone" id="phone" placeholder="Phone number"/>
+        <Input {...register("email")} name="email" id="email" placeholder="E-mail"/>
         <ButtonUserForm>Add</ButtonUserForm>
       </UserForm>
     </UserFormComponent>

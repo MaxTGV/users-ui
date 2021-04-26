@@ -8,6 +8,7 @@ import { setUsers } from "./state/users/actions";
 import { getUsers } from "./state/users/selectors";
 
 const StyledUpdateData = styled.div`
+  width: 100%;
   margin: 0px auto;
   flex-direction: column;
   justify-content: center;
