@@ -1,13 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import logger from "redux-logger";
-import { postReducer } from "./state/posts/postsReducer";
-import { isUserSelectedReducer } from "./state/users/isUserSelectedReducer";
+import { postsSlice } from "./state/posts/postsSlice";
 import { usersSlice } from "./state/users/usersSlice";
 
 const reducer = {
   users: usersSlice.reducer,
-  posts: postReducer,
-  isUserSelected: isUserSelectedReducer,
+  posts: postsSlice.reducer,
 };
 
 export const store = configureStore({
